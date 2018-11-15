@@ -101,7 +101,7 @@ Examples
 Update A Document
 ~~~~~~~~~~~~~~~~~~
 
-The ``grades`` collection contains documents similar to the following:
+The ``scores`` collection contains documents similar to the following:
 
 .. code-block:: javascript
 
@@ -136,7 +136,7 @@ updated document instead.
 Sort And Update A Document
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``grades`` collection contains documents similar to the following:
+The ``scores`` collection contains documents similar to the following:
 
 .. code-block:: javascript
 
@@ -202,7 +202,7 @@ The following operation sets a 5ms time limit to complete the update:
       db.scores.findOneAndUpdate(
          { "name" : "A. MacDyver" },
          { $inc : { "points" : 5 } },
-         { sort: { "points" : 1 }, maxTimeMS : 5 };
+         { sort: { "points" : 1 }, maxTimeMS : 5 }
       );
    }
    catch(e){
